@@ -22,12 +22,7 @@ const NavBar = () => {
     }
   };
 
-  const themeIcon =
-    theme === "light" ? (
-      <CiDark className="w-5 h-5" />
-    ) : (
-      <BsMoon className="w-4 h-4" />
-    );
+  const themeIcon = theme === "light" ? <CiDark className="w-5 h-5" /> : <BsMoon className="w-4 h-4" />;
 
   const links = [
     { name: "HOME", path: "/" },
@@ -43,27 +38,17 @@ const NavBar = () => {
             {links.map((link) => (
               <li
                 key={link.path}
-                className={
-                  pathname === link.path
-                    ? "active-link-navbar dark:text-white"
-                    : "hover:font-bold dark:text-white"
-                }
+                className={pathname === link.path ? "active-link-navbar dark:text-white" : "hover:font-bold dark:text-white"}
               >
                 <Link href={link.path}>
-                  <div className="text-[#363062] dark:text-white py-1 px-2">
-                    {link.name}
-                  </div>
+                  <div className="text-[#363062] dark:text-white py-1 px-2">{link.name}</div>
                 </Link>
               </li>
             ))}
           </ul>
           <div className="text-[#363062] dark:text-white">
             <Link href={"/"}>
-              <img
-                src={theme === "light" ? "/logo.png" : "/logo_light.png"}
-                alt="Logo"
-                className="w-auto h-10 mx-4"
-              />
+              <img src={theme === "light" ? "/logo.png" : "/logo_light.png"} alt="Logo" className="w-auto h-10 mx-4" />
             </Link>
           </div>
           <ul className="hidden md:flex flex-row justify-center align-middle space-x-3">
@@ -79,10 +64,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={toggleTheme}
-                  className="text-[#363062] dark:text-white"
-                >
+                <button onClick={toggleTheme} className="text-[#363062] dark:text-white">
                   {themeIcon}
                 </button>
               </li>
@@ -118,9 +100,7 @@ const NavBar = () => {
               className={pathname === link.path ? "active-link-navbar" : ""}
             >
               <Link href={link.path}>
-                <div className="text-[#363062] dark:text-white py-1 px-2">
-                  {link.name}
-                </div>
+                <div className="text-[#363062] dark:text-white py-1 px-2">{link.name}</div>
               </Link>
             </li>
           ))}
@@ -136,10 +116,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <button
-                onClick={toggleTheme}
-                className="text-[#363062] dark:text-white"
-              >
+              <button onClick={toggleTheme} className="text-[#363062] dark:text-white">
                 {themeIcon}
               </button>
             </li>

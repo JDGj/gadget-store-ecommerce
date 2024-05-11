@@ -2,3 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+.active-link-navbar {
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+
+.active-link-navbar::after {
+    content: "";
+    height: 4px;
+    width: 40%;
+    background-color: #363062;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rounded-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    border: #363062 2px solid;
+    border-radius: 50%;
+    background: rgb(54,48,98);
+    background: radial-gradient(circle, rgba(46, 41, 90) 5%, rgb(202, 181, 252, 0.5) 88%, rgb(243, 237, 255) 100%);
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    .rounded-ball {
+    width: 400px;
+    height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rounded-ball {
+    width: 250px;
+    height: 250px;
+    }
+}
