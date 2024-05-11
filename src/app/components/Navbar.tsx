@@ -22,7 +22,12 @@ const NavBar = () => {
     }
   };
 
-  const themeIcon = theme === "light" ? <CiDark className="w-5 h-5" /> : <BsMoon className="w-4 h-4" />;
+  const themeIcon =
+    theme === "light" ? (
+      <CiDark className="w-5 h-5" />
+    ) : (
+      <BsMoon className="w-4 h-4" />
+    );
 
   const links = [
     { name: "HOME", path: "/" },
@@ -33,45 +38,49 @@ const NavBar = () => {
   return (
     <div className="block top-0 sticky z-50 mb-10">
       <div>
-        <nav className="flex justify-between px-4 py-4 md:px-20 md:py-6 items-center xl:py-6 top-0 left-0 sticky bg-white dark:bg-[#867dca] shadow-md">
+        <nav className="flex justify-between px-4 py-4 md:px-20 md:py-6 items-center xl:py-6 top-0 left-0 sticky bg-white shadow-md">
           <ul className="hidden md:flex flex-row justify-center align-middle space-x-3">
             {links.map((link) => (
               <li
                 key={link.path}
-                className={pathname === link.path ? "active-link-navbar dark:text-white" : "hover:font-bold dark:text-white"}
+                className={
+                  pathname === link.path
+                    ? "active-link-navbar"
+                    : "hover:font-bold"
+                }
               >
                 <Link href={link.path}>
-                  <div className="text-[#363062] dark:text-white py-1 px-2">{link.name}</div>
+                  <div className="text-[#363062] py-1 px-2">{link.name}</div>
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="text-[#363062] dark:text-white">
+          <div className="text-[#363062]">
             <Link href={"/"}>
-              <img src={theme === "light" ? "/logo.png" : "/logo_light.png"} alt="Logo" className="w-auto h-10 mx-4" />
+              <img src={"/logo.png"} alt="Logo" className="w-auto h-10 mx-4" />
             </Link>
           </div>
           <ul className="hidden md:flex flex-row justify-center align-middle space-x-3">
             <ul className="flex flex-row space-x-3">
               <li>
-                <Link href={"/"} className="text-[#363062] dark:text-white">
+                <Link href={"/"} className="text-[#363062]">
                   <CiSearch className="w-5 h-5" />
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="text-[#363062] dark:text-white">
+                <Link href={"/"} className="text-[#363062]">
                   <CiShoppingCart className="w-5 h-5" />
                 </Link>
               </li>
               <li>
-                <button onClick={toggleTheme} className="text-[#363062] dark:text-white">
+                <button onClick={toggleTheme} className="text-[#363062]">
                   {themeIcon}
                 </button>
               </li>
               <li>
                 <Link
                   href={"/"}
-                  className="text-[#363062] dark:text-white border-[1px] border-[#363062] rounded-full px-7 py-3"
+                  className="text-[#363062] border-[1px] border-[#363062] rounded-full px-7 py-3"
                 >
                   LOGIN
                 </Link>
@@ -81,7 +90,7 @@ const NavBar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-[#363062] dark:text-white focus:outline-none"
+              className="text-[#363062] focus:outline-none"
             >
               <CiMenuFries className="w-5 h-5" />
             </button>
@@ -100,23 +109,23 @@ const NavBar = () => {
               className={pathname === link.path ? "active-link-navbar" : ""}
             >
               <Link href={link.path}>
-                <div className="text-[#363062] dark:text-white py-1 px-2">{link.name}</div>
+                <div className="text-[#363062] py-1 px-2">{link.name}</div>
               </Link>
             </li>
           ))}
           <ul className="flex flex-row justify-center space-x-4">
             <li>
-              <Link href={"/"} className="text-[#363062] dark:text-white">
+              <Link href={"/"} className="text-[#363062]">
                 <CiSearch className="w-6 h-6" />
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="text-[#363062] dark:text-white">
+              <Link href={"/"} className="text-[#363062]">
                 <CiShoppingCart className="w-6 h-6" />
               </Link>
             </li>
             <li>
-              <button onClick={toggleTheme} className="text-[#363062] dark:text-white">
+              <button onClick={toggleTheme} className="text-[#363062]">
                 {themeIcon}
               </button>
             </li>
@@ -124,7 +133,7 @@ const NavBar = () => {
           <li className="pt-4">
             <Link
               href={"/"}
-              className="text-[#363062] dark:text-white border-[1px] border-[#363062] rounded-full px-8 py-3"
+              className="text-[#363062] border-[1px] border-[#363062] rounded-full px-8 py-3"
             >
               LOGIN
             </Link>
