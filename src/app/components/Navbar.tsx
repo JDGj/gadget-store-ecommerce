@@ -10,24 +10,6 @@ import { BsMoon } from "react-icons/bs";
 const NavBar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("system");
-
-  const toggleTheme = () => {
-    if (theme === "system") {
-      setTheme("dark");
-    } else if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("system");
-    }
-  };
-
-  const themeIcon =
-    theme === "light" ? (
-      <CiDark className="w-5 h-5" />
-    ) : (
-      <BsMoon className="w-4 h-4" />
-    );
 
   const links = [
     { name: "HOME", path: "/" },
@@ -38,7 +20,7 @@ const NavBar = () => {
   return (
     <div className="block top-0 sticky z-50 mb-10">
       <div>
-        <nav className="flex justify-between px-4 py-4 md:px-20 md:py-6 items-center xl:py-6 top-0 left-0 sticky bg-white shadow-md">
+        <nav className="flex justify-around px-4 py-4 md:px-20 md:py-6 items-center xl:py-6 top-0 left-0 sticky bg-white shadow-md">
           <ul className="hidden md:flex flex-row justify-center align-middle space-x-3">
             {links.map((link) => (
               <li
@@ -46,7 +28,7 @@ const NavBar = () => {
                 className={
                   pathname === link.path
                     ? "active-link-navbar"
-                    : "hover:font-bold"
+                    : "hover:font-semibold"
                 }
               >
                 <Link href={link.path}>
@@ -71,11 +53,6 @@ const NavBar = () => {
                 <Link href={"/"} className="text-[#363062]">
                   <CiShoppingCart className="w-5 h-5" />
                 </Link>
-              </li>
-              <li>
-                <button onClick={toggleTheme} className="text-[#363062]">
-                  {themeIcon}
-                </button>
               </li>
               <li>
                 <Link
@@ -123,11 +100,6 @@ const NavBar = () => {
               <Link href={"/"} className="text-[#363062]">
                 <CiShoppingCart className="w-6 h-6" />
               </Link>
-            </li>
-            <li>
-              <button onClick={toggleTheme} className="text-[#363062]">
-                {themeIcon}
-              </button>
             </li>
           </ul>
           <li className="pt-4">

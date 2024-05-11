@@ -41,25 +41,25 @@ const HomePage = () => {
       <div className="flex flex-col sm:flex-row gap-4 px-10 items-center pt-10">
         <h1 className="font-bold pr-2">Or contact us on:</h1>
         <Link href="/instagram" className="w-full sm:w-auto">
-          <div className="border border-[#363062] bg-[#d6d5de50] rounded-full flex justify-center align-middle px-3 py-2">
+          <div className="border border-[#363062] bg-transparent rounded-full flex justify-center align-middle px-3 py-2">
             <CiInstagram className="w-5 h-5 flex justify-center align-middle pt-1" />
             Instagram
           </div>
         </Link>
         <Link href="/gmail" className="w-full sm:w-auto">
-          <div className="border border-[#363062] bg-[#d6d5de50] rounded-full flex justify-center align-middle px-3 py-2">
+          <div className="border border-[#363062] bg-transparent rounded-full flex justify-center align-middle px-3 py-2">
             <CiMail className="w-5 h-5 flex justify-center align-middle pt-1" />{" "}
             Gmail
           </div>
         </Link>
         <Link href="/facebook" className="w-full sm:w-auto">
-          <div className="border border-[#363062] bg-[#d6d5de50] rounded-full flex justify-center align-middle px-3 py-2">
+          <div className="border border-[#363062] bg-transparent rounded-full flex justify-center align-middle px-3 py-2">
             <CiFacebook className="w-5 h-5 flex justify-center align-middle pt-1" />
             Facebook
           </div>
         </Link>
         <Link href="/linkedin" className="w-full sm:w-auto">
-          <div className="border border-[#363062] bg-[#d6d5de50] rounded-full flex justify-center align-middle px-3 py-2">
+          <div className="border border-[#363062] bg-transparent rounded-full flex justify-center align-middle px-3 py-2">
             <CiLinkedin className="w-5 h-5 flex justify-center align-middle pt-1" />
             Linkedin
           </div>
