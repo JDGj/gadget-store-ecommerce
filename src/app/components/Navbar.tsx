@@ -27,8 +27,8 @@ const NavBar = () => {
                 key={link.path}
                 className={
                   pathname === link.path
-                    ? "active-link-navbar"
-                    : "hover:font-semibold"
+                    ? "active-link-navbar font-bold"
+                    : "transition ease-in-out delay-150 hover:font-semibold"
                 }
               >
                 <Link href={link.path}>
@@ -57,7 +57,7 @@ const NavBar = () => {
               <li>
                 <Link
                   href={"/"}
-                  className="text-[#363062] border-[1px] border-[#363062] rounded-full px-7 py-3"
+                  className="transition ease-in-out delay-150 text-[#363062] border-[1px] border-[#363062] rounded-full px-7 py-3 hover:text-white hover:bg-[#363062]"
                 >
                   LOGIN
                 </Link>
