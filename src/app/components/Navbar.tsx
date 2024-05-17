@@ -4,8 +4,7 @@
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { CiSearch, CiShoppingCart, CiDark, CiMenuFries } from "react-icons/ci";
-import { BsMoon } from "react-icons/bs";
+import { CiSearch, CiShoppingCart, CiMenuFries } from "react-icons/ci";
 
 const NavBar = () => {
   const pathname = usePathname();
