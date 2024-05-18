@@ -70,7 +70,7 @@ const HomePage = () => {
           </Link>
         </div>
       </section>
-      <section id="ourProducts" className="px-20 py-28 my-16">
+      <section id="ourProducts" className="px-20 py-40 my-16">
         <div className="z-20 grid grid-cols-3 space-x-28">
           <div className="flex justify-center align-middle flex-col">
             <h1 className="text-[#363062] font-bold text-3xl lg:text-4xl pb-4 md:pb-6">
